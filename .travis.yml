@@ -43,13 +43,6 @@ before_script:
  - export RDBASE=$CONDA_PREFIX/Library/share/RDKit
  - echo $RDBASE
 
-script:
- # Run tests
- - import growai
-
-after_script:
-- curl -s https://codecov.io/bash
-
 before_deploy:
  - conda install -f  setuptools
  - conda build conda_recipe -c local
