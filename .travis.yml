@@ -44,7 +44,7 @@ before_script:
  - echo $RDBASE
 
 script: 
- - pytest
+ - python -m pytest --disable-warnings --cov=./ tests/
 
 before_deploy:
  - conda install -f  setuptools
@@ -58,4 +58,6 @@ deploy:
     on:
 tags: true
 
-
+# Push the results back to codecov
+#after_success:
+#  - codecov --token 
