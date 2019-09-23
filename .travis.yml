@@ -43,6 +43,9 @@ before_script:
  - export RDBASE=$CONDA_PREFIX/Library/share/RDKit
  - echo $RDBASE
 
+script: 
+ - pytest
+
 before_deploy:
  - conda install -f  setuptools
  - conda build conda_recipe -c local
