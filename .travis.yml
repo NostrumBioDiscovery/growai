@@ -33,6 +33,7 @@ before_install:
 install:
  # Necessary dependencies
  - conda install -q tqdm numpy pytest pytest-cov codecov umap-learn mpld3
+ - conda install -q -c nostrumbiodiscovery prody
 
  # Install the most recent rdkit package from the RDKit anaconda channel.
  - conda install -q -c rdkit rdkit
